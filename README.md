@@ -227,7 +227,7 @@ docker run -d \
   -e VECTRA_MCP_PORT=8000 \
   -p 8000:8000 \
   --restart unless-stopped \
-  ghcr.io/vectra-ai-research/vectra-ai-onpremise-mcp-server:latest
+  ghcr.io/vectra-ai-research/vectra-ai-mcp-server-qux:latest
 ```
 
 #### SSE Transport (Server-Sent Events)
@@ -240,7 +240,7 @@ docker run -d \
   -e VECTRA_MCP_PORT=8000 \
   -p 8000:8000 \
   --restart unless-stopped \
-  ghcr.io/vectra-ai-research/vectra-ai-onpremise-mcp-server:latest
+  ghcr.io/vectra-ai-research/vectra-ai-mcp-server-qux:latest
 ```
 
 #### Stdio Transport (For Local MCP Clients)
@@ -250,7 +250,7 @@ docker run -d \
   --env-file .env \
   -e VECTRA_MCP_TRANSPORT=stdio \
   --restart unless-stopped \
-  ghcr.io/vectra-ai-research/vectra-ai-onpremise-mcp-server:latest
+  ghcr.io/vectra-ai-research/vectra-ai-mcp-server-qux:latest
 ```
 
 3. **Or use Docker Compose (Alternative):**
@@ -260,7 +260,7 @@ Create a `docker-compose.yml` file:
 version: '3.8'
 services:
   vectra-onpremise-mcp-server:
-    image: ghcr.io/vectra-ai-research/vectra-ai-onpremise-mcp-server:latest
+    image: ghcr.io/vectra-ai-research/vectra-ai-mcp-server-qux:latest
     container_name: vectra-onpremise-mcp-server
     env_file: .env
     environment:
